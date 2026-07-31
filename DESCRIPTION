@@ -1,14 +1,17 @@
 Package: kmaps
-Title: A Package To Manage Map Related Topics
+Title: Map Related Functions
 Version: 0.0.0.9000
 Authors@R: 
-    person("Philippe", "Peret", , "philippe.peret@hotmail.com", role = c("aut", "cre"))
-Description: The package delivers a set of functions / Shiny modules to wrap usages around Leaflet.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person(given = "Philippe",
+           family = "Peret",
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0003-9666-7490"),
+           email = "philippe.peret@hotmail.com")
+Description: The package wraps a set of functions related to Leaflet use cases.
+License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.2
+RoxygenNote: 7.3.3
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
