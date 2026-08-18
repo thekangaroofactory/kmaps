@@ -2,7 +2,8 @@
 
 ## Authors
 
-- **Philippe Peret**. Author, maintainer, copyright holder.
+- **[Philippe Peret](https://www.linkedin.com/in/philippeperet/)**.
+  Author, maintainer, copyright holder.
   [](https://orcid.org/0009-0003-9666-7490)
 
 ## Citation
