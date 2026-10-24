@@ -13,6 +13,9 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 Depends:
     R (>= 4.1.0)
+Imports:
+    iker (>= 0.9.6),
+    jsonlite
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
