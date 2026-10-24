@@ -4,16 +4,31 @@
 \alias{geocode}
 \title{Nominatim Geo-coding}
 \usage{
-geocode(x)
+geocode(x, cache = Sys.getenv("R_KMAPS_CACHE"), timeout = 8760, limit = 1)
 }
 \arguments{
 \item{x}{character vector of the addresses.}
+
+\item{cache}{the path to the cache folder (see details).}
+
+\item{timeout}{a numeric (in hours) when cache data is obsolete.}
+
+\item{limit}{a numeric (in Mb) to define the cache size limit.}
 }
 \value{
 a data.frame.
 }
 \description{
 Get GPS coordinates from addresses using the Nominatim OSM API.
+}
+\details{
+Wrapping calls to the Nominatim API into a cache system is mandatory
+to avoid IP banning (when too many requests are send for the same query).
+
+The cache \code{timeout} is set to 1 year (8760 hours) and \code{limit} to 1 Mb.
+Also encryption is not activated since the API returns open data.
+
+Use the \code{R_KMAPS_CACHE} environment variable to define it.
 }
 \examples{
 \dontrun{
