@@ -3,12 +3,13 @@
 #' Nominatim Geo-coding
 #' 
 #' @description
-#' Get GPS coordinates from addresses using the Nominatim OSM API.
+#' Get GPS coordinates from addresses using the OpenStreetMap Nominatim API.
 #'
 #' @param x character vector of the addresses.
 #' @param cache the path to the cache folder (see details).
 #' @param timeout a numeric (in hours) when cache data is obsolete.
 #' @param limit a numeric (in Mb) to define the cache size limit.
+#' @param verbose a logical if logs should be printed to the console.
 #' 
 #' @details
 #' Wrapping calls to the Nominatim API into a cache system is mandatory
@@ -24,10 +25,12 @@
 #'
 #' @examples
 #' \dontrun{
+#' # assuming R_KMAPS_CACHE environment variable has been set
 #' geocode("Musée du Louvre")
+#' geocode("Musée du Louvre", "Musée d'Orsay)
 #' }
 
-geocode <- function(x, cache = Sys.getenv("R_KMAPS_CACHE"), timeout = 8760, limit = 1){
+geocode <- function(x, cache = Sys.getenv("R_KMAPS_CACHE"), timeout = 8760, limit = 1, verbose = FALSE){
   
   # -- check
   stopifnot("cache can't be empty, check R_KMAPS_CACHE environment variable" = cache != "")
@@ -61,12 +64,13 @@ geocode <- function(x, cache = Sys.getenv("R_KMAPS_CACHE"), timeout = 8760, limi
   
   # -- apply helper
   # wrap into cache to avoid IP ban
-  m <- t(sapply(x, \(y) iker::with_cache(nominatim(y),
+  m <- t(sapply(x, \(y) iker::with_cache(nominatim(address = y),
                                          path = cache,
                                          timeout = timeout,
                                          limit = limit,
                                          cleanup = "off",
-                                         encrypt = FALSE)))
+                                         encrypt = FALSE,
+                                         verbose = verbose)))
   
   # -- return
   as.data.frame(m)
