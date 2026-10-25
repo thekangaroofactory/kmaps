@@ -38,6 +38,12 @@ test_that("geocode works", {
   # repeat
   y <- geocode(addresses)
   expect_identical(x, y)
+  
+  # -- negative test
+  x <- geocode(x = NULL)
+  str(x)
+  expect_s3_class(x, "data.frame")
+  expect_shape(x, nrow = 0)
 
 })
 

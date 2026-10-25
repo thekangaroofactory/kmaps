@@ -72,6 +72,10 @@ geocode <- function(x, cache = Sys.getenv("R_KMAPS_CACHE"), timeout = 8760, limi
                                          encrypt = FALSE,
                                          verbose = verbose)))
   
+  # -- check
+  if(length(m) == 0)
+    return(data.frame())
+  
   # -- return
   as.data.frame(m)
   
