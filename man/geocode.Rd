@@ -38,3 +38,10 @@ Also encryption is not activated since the API returns open data.
 
 Use the \code{R_KMAPS_CACHE} environment variable to define it.
 }
+\examples{
+\dontrun{
+# assuming R_KMAPS_CACHE environment variable has been set
+geocode("Musée du Louvre")
+geocode(c("Musée du Louvre", "Musée d'Orsay"))
+}
+}

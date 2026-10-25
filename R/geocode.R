@@ -27,7 +27,7 @@
 #' \dontrun{
 #' # assuming R_KMAPS_CACHE environment variable has been set
 #' geocode("Musée du Louvre")
-#' geocode("Musée du Louvre", "Musée d'Orsay)
+#' geocode(c("Musée du Louvre", "Musée d'Orsay"))
 #' }
 
 geocode <- function(x, cache = Sys.getenv("R_KMAPS_CACHE"), timeout = 8760, limit = 1, verbose = FALSE){
