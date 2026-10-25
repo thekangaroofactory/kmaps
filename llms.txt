@@ -1,7 +1,6 @@
 # kmaps
 
-Map Related Functions.  
-The package wraps a set of functions related to Leaflet use cases.
+A set of utilities to work with maps, including tools for geocoding.
 
 ## Installation
 
