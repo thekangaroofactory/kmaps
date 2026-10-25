@@ -8,13 +8,13 @@
 
 ## Citation
 
-Peret P (2026). *kmaps: Map Related Functions*. R package version
-0.0.0.9000, <https://thekangaroofactory.github.io/kmaps/>.
+Peret P (2026). *kmaps: Map Related Functions*. R package version 0.9.1,
+<https://thekangaroofactory.github.io/kmaps/>.
 
     @Manual{,
       title = {kmaps: Map Related Functions},
       author = {Philippe Peret},
       year = {2026},
-      note = {R package version 0.0.0.9000},
+      note = {R package version 0.9.1},
       url = {https://thekangaroofactory.github.io/kmaps/},
     }
