@@ -50,3 +50,13 @@ The cache `timeout` is set to 1 year (8760 hours) and `limit` to 1 Mb.
 Also encryption is not activated since the API returns open data.
 
 Use the `R_KMAPS_CACHE` environment variable to define it.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+# assuming R_KMAPS_CACHE environment variable has been set
+geocode("Musée du Louvre")
+geocode(c("Musée du Louvre", "Musée d'Orsay"))
+} # }
+```
