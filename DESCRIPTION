@@ -1,5 +1,6 @@
 Package: kmaps
 Title: Map Related Functions
+Description: A set of utilities to work with maps, including tools for geocoding.
 Version: 0.9.1
 Authors@R: 
     person(given = "Philippe",
@@ -7,7 +8,6 @@ Authors@R:
            role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0009-0003-9666-7490"),
            email = "philippe.peret@hotmail.com")
-Description: The package wraps a set of functions related to Leaflet use cases.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
