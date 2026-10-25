@@ -7,3 +7,10 @@ template:
 authors:
   Philippe Peret:
     href: https://www.linkedin.com/in/philippeperet/
+
+reference:
+- title: Geocoding
+  desc: Functions linked to the Nominatim OpenStreetMap API.
+  contents:
+  - geocode
+  - rev_geocode
